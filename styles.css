@@ -9,4 +9,26 @@
 /* Warm stone and champagne gold, matching the original crown. */
 html,body{overflow-x:clip}.light .section-head h2 em,.light h2 em{color:#80632c}.service-card.featured{background:#e5d6b4}.service-card:hover,.service-row:hover{background:#eee4d1}.quote-section{background:#d4b66d;color:#211e18}.top{background:#171717f2}.choice:hover,.choice.selected{background:#f2e7ce;border-color:#a78a50}.field input,.field textarea,.field select{background:#f7f5ef;border-color:#d8d0c0}.field input:focus,.field textarea:focus{outline-color:#a78a50}.story-copy p{color:#b8b3a9}.light .story-copy p{color:#59554d}.eyebrow.dark:before{background:#927338}
 
-.services-grid{background:#d8d0c0;border-color:#d8d0c0}.services-grid .service-card{background:#f3f0e9}.services-grid .service-card.featured{background:#e5d6b4}.services-grid .service-card:hover{background:#eee4d1}.services-grid .reveal{opacity:1;transform:none}.service-card .card-arrow{border-color:#b9aa90}
+.services-grid{background:#d8d0c0;border-color:#d8d0c0}.services-grid .service-card{background:#f3f0e9}.services-grid .service-card.featured{background:#e5d6b4}.services-grid .service-card:hover{background:#eee4d1}.service-card .card-arrow{border-color:#b9aa90}
+
+/* Refined motion: warm backing stays visible throughout the reveal. */
+.services-grid{background:#d8d0c0;border-color:#d8d0c0}
+.services-grid .service-card.reveal{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path .85s cubic-bezier(.22,1,.36,1),background .3s}
+.services-grid .service-card.reveal.visible{clip-path:inset(0)}
+.services-grid .service-card:nth-child(3n+2){transition-delay:.10s}
+.services-grid .service-card:nth-child(3n+3){transition-delay:.20s}
+@keyframes imperial-rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes imperial-image{from{opacity:0;transform:scale(1.07)}to{opacity:1;transform:scale(1)}}
+.hero h1,.page-hero h1{animation:imperial-rise 1.05s cubic-bezier(.22,1,.36,1) both}
+.hero .eyebrow,.page-hero .eyebrow{animation:imperial-rise .8s .1s both}
+.hero-intro,.page-hero p{animation:imperial-rise .9s .28s both}
+.hero-bottom{animation:imperial-rise .9s .45s both}
+.hero-image{animation:imperial-image 1.8s cubic-bezier(.22,1,.36,1) both}
+.reveal{transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
+.service-row b,.rounded-link b,.nav-cta b{display:inline-block;transition:transform .35s cubic-bezier(.22,1,.36,1)}
+.service-row:hover b,.rounded-link:hover b,.nav-cta:hover b{transform:translate(4px,-4px)}
+.desktop a{position:relative}.desktop a:after{content:'';position:absolute;bottom:-7px;left:0;width:100%;height:1px;background:var(--acid);transform:scaleX(0);transform-origin:right;transition:transform .35s}.desktop a:hover:after{transform:scaleX(1);transform-origin:left}
+.feature-photos img,.story-visual img,.gallery-tile img{transition:transform .85s cubic-bezier(.22,1,.36,1)}.story-visual:hover img{transform:scale(1.035)}
+.wizard .choice,.wizard .field{animation:imperial-rise .45s cubic-bezier(.22,1,.36,1) both}.wizard .choice:nth-child(2){animation-delay:.05s}.wizard .choice:nth-child(3){animation-delay:.10s}.wizard .choice:nth-child(4){animation-delay:.15s}.wizard .choice:nth-child(5){animation-delay:.20s}
+.menu-overlay .mobile-links a{opacity:0;transform:translateY(18px);transition:opacity .45s,transform .55s cubic-bezier(.22,1,.36,1)}.menu-overlay.open .mobile-links a{opacity:1;transform:none}.menu-overlay.open .mobile-links a:nth-child(2){transition-delay:.06s}.menu-overlay.open .mobile-links a:nth-child(3){transition-delay:.12s}.menu-overlay.open .mobile-links a:nth-child(4){transition-delay:.18s}.menu-overlay.open .mobile-links a:nth-child(5){transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.services-grid .service-card.reveal{clip-path:none}.menu-overlay .mobile-links a{transform:none}.hero-image,.hero h1,.page-hero h1,.hero-intro,.hero-bottom,.wizard .choice,.wizard .field{animation:none!important}}
