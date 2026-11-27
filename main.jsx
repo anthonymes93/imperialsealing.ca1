@@ -436,6 +436,7 @@ const retainingWallDetails = `
 <p>Whether your yard is on a vertical slope, prone to flooding, or you’d like to add some visual appeal, we’re here to help. Call (416) 525-7077 to book a yard assessment.</p>
 `;
 const serviceDetailImages = {
+  'concrete-stairs': 'concrete-stairs.jpg',
   'retaining-wall-services': 'retaining-wall-services.png',
   'stucco-installation': 'stucco-installation.png',
   'garage-concrete': 'garage-concrete.png',
