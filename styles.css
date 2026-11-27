@@ -32,3 +32,21 @@ html,body{overflow-x:clip}.light .section-head h2 em,.light h2 em{color:#80632c}
 .wizard .choice,.wizard .field{animation:imperial-rise .45s cubic-bezier(.22,1,.36,1) both}.wizard .choice:nth-child(2){animation-delay:.05s}.wizard .choice:nth-child(3){animation-delay:.10s}.wizard .choice:nth-child(4){animation-delay:.15s}.wizard .choice:nth-child(5){animation-delay:.20s}
 .menu-overlay .mobile-links a{opacity:0;transform:translateY(18px);transition:opacity .45s,transform .55s cubic-bezier(.22,1,.36,1)}.menu-overlay.open .mobile-links a{opacity:1;transform:none}.menu-overlay.open .mobile-links a:nth-child(2){transition-delay:.06s}.menu-overlay.open .mobile-links a:nth-child(3){transition-delay:.12s}.menu-overlay.open .mobile-links a:nth-child(4){transition-delay:.18s}.menu-overlay.open .mobile-links a:nth-child(5){transition-delay:.24s}
 @media(prefers-reduced-motion:reduce){.services-grid .service-card.reveal{clip-path:none}.menu-overlay .mobile-links a{transform:none}.hero-image,.hero h1,.page-hero h1,.hero-intro,.hero-bottom,.wizard .choice,.wizard .field{animation:none!important}}
+
+.review-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin: 20px 0 28px;
+}
+.review-badges a {
+  display: block;
+  max-width: 100%;
+}
+.review-badges img {
+  display: block;
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+}
